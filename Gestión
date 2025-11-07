@@ -1,0 +1,15 @@
+@startuml
+title Diagrama de Comunicación: Gestión de Inventario
+
+object Administrador
+object Inv
+object BD
+object Prov
+
+Administrador -[#blue]> Inv : 1. Registrar lote
+Inv -[#blue]> BD : 2. Guardar datos
+Administrador -[#blue]> Inv : 3. Consultar stock
+Inv -[#blue]> BD : 4. Obtener información
+Inv -[#blue]> Prov : 5. Notificar faltante
+Prov -[#blue]> Inv : 6. Confirmar envío
+@enduml
