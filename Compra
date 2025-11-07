@@ -1,0 +1,18 @@
+@startuml
+title Diagrama de Colaboración 1: Compra del Jabón Honeymoon
+
+actor Cliente
+object Web
+object Pago
+object BD
+object Correo
+
+Cliente --> Web : 1. Seleccionar producto
+Web --> BD : 2. Verificar existencias
+BD --> Web : 3. Confirmar disponibilidad
+Cliente --> Pago : 4. Enviar datos de pago
+Pago --> BD : 5. Registrar transacción
+Pago --> Web : 6. Confirmar compra
+Web --> Correo : 7. Enviar confirmación
+Correo --> Cliente : 8. Entregar comprobante
+@enduml
