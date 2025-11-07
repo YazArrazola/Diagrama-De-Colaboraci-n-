@@ -1,0 +1,16 @@
+@startuml
+title Diagrama de Colaboración 4: Atención al Cliente
+
+' Usamos objetos en lugar de actores para evitar el error de tipo
+object Cliente
+object Soporte
+object BD
+object Agente
+
+' Conexiones numeradas que simulan la secuencia de colaboración
+Cliente -- Soporte : 1. Enviar queja
+Soporte -- BD : 2. Registrar solicitud
+Soporte -- Agente : 3. Notificar incidencia
+Agente -- BD : 4. Consultar información
+Agente -- Cliente : 5. Enviar respuesta
+@enduml
