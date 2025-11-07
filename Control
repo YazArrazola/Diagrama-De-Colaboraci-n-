@@ -1,0 +1,15 @@
+@startuml
+title Diagrama de Comunicación: Control de Calidad
+
+object Empleado
+object Calidad
+object BD
+object Admin
+
+Empleado -[#blue]> Calidad : 1. Registrar prueba pH
+Calidad -[#blue]> BD : 2. Guardar resultados
+Empleado -[#blue]> Calidad : 3. Registrar textura
+Calidad -[#blue]> BD : 4. Guardar valores
+Calidad -[#blue]> Admin : 5. Enviar reporte
+Admin -[#blue]> BD : 6. Aprobar o rechazar lote
+@enduml
